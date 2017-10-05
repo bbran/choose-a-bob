@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Vote for Bobs</title>
+</head>
+<body>
+Select a Student:
+<form method="post" action="/selectStudent">
+	<select name="studentId">
+			<option value="">Choose a student...</option>
+		{{#students}}
+			<option value="{{id}}">{{name}}</option>
+		{{/students}}
+	</select>
+	<button>Choose</button>
+</form>
+</body>
+</html>
